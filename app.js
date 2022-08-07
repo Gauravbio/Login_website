@@ -8,8 +8,9 @@ app.use(express.json());
 app.use(cors());
 app.use(express.urlencoded({limit:"50mb",extended:true}));
 app.use(cookieparser());
-
-dotenv.config({path:"./config.env"});
+if(process.env.NODE_ENV !== "production") {
+    dotenv.config({path:"./config.env"});
+}
 
 const route=require("./route");
 
