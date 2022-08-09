@@ -16,7 +16,7 @@ const route=require("./route");
 
 app.use("/api",route);
 app.get('/',async (res)=> {
-    res.status(200).json({
+    res.statusCode(200).send({
         message: "sahi to chal rhi hai"
     })
 }) 
