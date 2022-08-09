@@ -15,5 +15,10 @@ if(process.env.NODE_ENV !== "production") {
 const route=require("./route");
 
 app.use("/api",route);
+app.get('/',async (res)=> {
+    res.status(200).json({
+        message: "sahi to chal rhi hai"
+    })
+}) 
 
 module.exports=app;
